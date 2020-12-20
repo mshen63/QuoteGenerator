@@ -6,8 +6,8 @@ class App extends React.Component {
     super(props)
     this.state=({
       keyWords: '',
-      quote:'Hello its me',
-      author:'- Adele',
+      quote:'Like your body your mind also gets tired so refresh it by wise sayings.',
+      author:'- Hazrat Ali',
       collection:[],
       link: ''
       })
