@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap");
 
-#all{
+*{
     font-family: 'Allerta Stencil';
+}
+#all{
     display: flex;
     flex-direction: column;
     justify-content: center;
