@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 class App extends React.Component {
@@ -39,8 +39,6 @@ class App extends React.Component {
     let newArr = this.state.collection.filter(quote=>quote.author!=null);
     let random1 = Math.floor(Math.random()*newArr.length)
     let word = this.state.keyWords.toLowerCase();
-    let regex= new RegExp(word+' ')
-    let regex2 = new RegExp(' '+word)
     if (word!==''){
       newArr=newArr.filter(quote=>(quote.text.toLowerCase().split(' ').includes(word)||quote.author.toLowerCase().split(' ').includes(word)));
       let random2= Math.floor(Math.random()*newArr.length)
@@ -78,7 +76,7 @@ class App extends React.Component {
           <div id="search">
             <p>Get Quotes by Keyword or Author:</p>
             <form>
-              <input id="editor" value={this.state.keyWords} onChange = {this.getkeyWords} placeholder="Enter a Search Term!"                   type="text"></input>
+              <input id="editor" value={this.state.keyWords} onChange = {this.getkeyWords} placeholder="Enter a Search Term!" type="text"></input>
               <button type="button" onClick = {this.newQuote}>Submit</button>
             </form>
           </div>
@@ -90,7 +88,7 @@ class App extends React.Component {
             </div>
             <div id="buttons">
               <button id="new-quote" onClick = {this.newQuote}>Anotha One</button>
-              <button onClick = {this.handleTweet} id = "tweet-quote"><a  target ="_top" target="_top" href={this.state.link}>Tweet             Tweet</a></button>
+              <button onClick = {this.handleTweet} id = "tweet-quote"><a target="_top" href={this.state.link}>Tweet Tweet</a></button>
             </div>
           </div>
 
@@ -98,6 +96,5 @@ class App extends React.Component {
       )
     }
 }
-
 
 export default App;
