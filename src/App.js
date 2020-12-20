@@ -72,7 +72,7 @@ class App extends React.Component {
     render(){
       return(
         <div id="all">
-
+          <h1><u>A Quote Generator</u></h1>
           <div id="search">
             <p>Get Quotes by Keyword or Author:</p>
             <form>
