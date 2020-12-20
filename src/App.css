@@ -3,6 +3,7 @@
 *{
     font-family: 'Allerta Stencil';
 }
+
 #all{
     display: flex;
     flex-direction: column;
